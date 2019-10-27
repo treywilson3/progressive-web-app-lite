@@ -1,0 +1,11 @@
+<div *ngIf="inputArray.length" style="margin-right: 5rem;">
+        <h1>{{ title }}</h1>
+        <ng-container *ngFor="let value of inputArray">
+            <div>
+                <div>
+                    <p> {{ value.login }}</p>
+                    <p> {{ value.htmlUrl }}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>

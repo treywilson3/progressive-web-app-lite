@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div style="display: flex; justify-content: center">
+    <input #inputBoi type="text" style="width: 20rem; height: 5rem;">
+    <button (click)="searchForUser()">Search</button>
+</div>
+
+<button (click)="sendPushNotification()">Push Me</button>
+
+<button (click)="deleteAllUsers()">Delete All Users</button>
+
+<div style="display:flex;">
+    <app-user-display 
+        title='IndexedDB Users'
+        [inputArray]="indexedDbUsers">
+    </app-user-display>
+    <app-user-display 
+        title='Saved Users'
+        [inputArray]="savedUsers">
+    </app-user-display>
+    <app-user-display 
+        title='All session Added Users'
+        [inputArray]="usersAddedInSession">
+    </app-user-display>
+    <app-user-display 
+        title='Using the store'
+        [inputArray]="storeUsers">
+    </app-user-display>
+</div>
